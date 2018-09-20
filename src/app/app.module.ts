@@ -11,7 +11,6 @@ import { AddBookComponent } from './components/add-book/add-book.component';
 
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { DeleteComponent } from './components/delete/delete.component';
-import { AppRoutingModule } from './/app-routing.module';
 import { BooksService } from './services/books.service';
 import { EditComponent } from './components/edit/edit.component'
 
@@ -23,21 +22,21 @@ import { EditComponent } from './components/edit/edit.component'
     FooterComponent,
     BooksComponent,
     AddBookComponent,
-    
+
     PageNotFoundComponent,
     DeleteComponent,
     EditComponent,
   ],
-  
+
   imports: [
     BrowserModule,
     FormsModule,
     FlashMessagesModule.forRoot(),
     HttpModule,
-    AppRoutingModule
+
   ],
-  
-  
+
+
   providers: [BooksService],
   bootstrap: [AppComponent]
 })
