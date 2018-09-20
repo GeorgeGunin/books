@@ -9,7 +9,6 @@ import { FooterComponent } from './components/footer/footer.component';
 import { BooksComponent } from './components/books/books.component';
 import { AddBookComponent } from './components/add-book/add-book.component';
 
-import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { DeleteComponent } from './components/delete/delete.component';
 import { BooksService } from './services/books.service';
 import { EditComponent } from './components/edit/edit.component'
@@ -22,8 +21,6 @@ import { EditComponent } from './components/edit/edit.component'
     FooterComponent,
     BooksComponent,
     AddBookComponent,
-
-    PageNotFoundComponent,
     DeleteComponent,
     EditComponent,
   ],
