@@ -1,0 +1,13 @@
+<app-navbar></app-navbar>
+<br>
+<br>
+<flash-messages id="ms"></flash-messages>
+<div class="container-fluid" style="min-height: 950px">
+
+    <app-delete [id]="id" [books]="books"></app-delete>
+    <app-edit [id]="id" [books]="books"></app-edit>
+    <app-add-book [books]="books"></app-add-book>
+    <app-books [books]="books"></app-books>
+
+</div>
+<app-footer></app-footer>

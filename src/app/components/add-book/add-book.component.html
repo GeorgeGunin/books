@@ -1,0 +1,58 @@
+<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModal" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="addModal">Add book</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+
+
+        <form id="addBookForm" #addBookForm="ngForm" (submit)="onAddBookbtn(addBookForm)" autocomplete="off">
+
+          <div class="form-group">
+            <label for="booktitle">Book title</label>
+            <input required type="text" class="form-control" id="booktitle" name="booktitle" placeholder="Book title"
+              ngModel #booktitle="ngModel" (focusout)="checkTitle(booktitle)">
+            <span class="text-danger" *ngIf="booktitle.errors?.required && booktitle.touched">*Title is required</span>
+            <span class="text-danger" *ngIf="taken">*Title is already taken</span>
+          </div>
+          <div class="form-group">
+            <label for="pubbook">Date</label>
+            <input required pattern="^(0[1-9]|1[012])[- /.\\](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d$" type="text"
+              class="form-control" id="p-book" name="pbook" placeholder="Published date" #pubbook="ngModel" ngModel>
+            <span class="text-danger" *ngIf="pubbook.errors?.required  && pubbook.touched">* Date is required </span>
+            <span class="text-danger" *ngIf="pubbook.errors?.pattern && pubbook.touched">*A valid Date is required
+            </span>
+          </div>
+
+          <div class="form-group">
+            <label for="bookauthor">Author</label>
+            <input required pattern="^([a-zA-Z]+\s*)+$" type="text" class="form-control" id="bookauthor" name="bookauthor"
+              placeholder="Book author" #bookauthor="ngModel" ngModel>
+            <span class="text-danger" *ngIf="bookauthor.errors?.required  && bookauthor.touched">* Book Author is
+              required </span>
+            <span class="text-danger" *ngIf="bookauthor.errors?.pattern  && bookauthor.touched">* A valid Book Author
+              is required </span>
+          </div>
+          <br>
+
+          <button [disabled]="!addBookForm.form.valid
+           ||taken               
+          " type="submit" name="submit"
+            class="btn btn-primary btn-block add-btn">Add
+            book</button>
+
+        </form>
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

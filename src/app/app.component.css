@@ -1,0 +1,12 @@
+#ms{
+  
+  position: fixed;
+  width: 60%;
+  z-index: 9999;
+  text-align: center;
+  left : 0;
+  top: 50;
+  bottom: 50;
+  right: 0;
+  margin: auto auto;
+}

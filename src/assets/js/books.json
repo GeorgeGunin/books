@@ -1,0 +1,20 @@
+[
+  {
+    "id" : "0",
+    "bookTitle" : "The Witcher",
+	"authorName" : "Anjey Sapkovsky",
+	"publishedDate" : "11/14/1989" 
+  },
+  {
+    "id" : "1",
+	"bookTitle" : "Dune",
+	"authorName" : "Frank Gerbert",
+	"publishedDate" : "07/15/1980"
+  },
+  {
+    "id" : "2",
+	"bookTitle" : "PHP7",
+	"authorName" : "Doug Bierer",
+	"publishedDate" : "11/09/2017"
+  }
+]
