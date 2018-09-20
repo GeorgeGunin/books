@@ -14,7 +14,7 @@
         <form id="editBookForm" #editBookForm="ngForm" (submit)="onEditBookbtn(editBookForm)" autocomplete="off">
           <div class="form-group">
             <label for="booktitle">Book title</label>
-            <input required type="text" class="form-control" id="booktitle" name="booktitle" [(ngModel)]="book.bookTitle"
+            <input required type="text" class="form-control" id="booktitle" name="booktitle" [ngModel]="book.bookTitle"
               value="book.bookTitle" (focusout)="isTakenTitle(booktitle)" placeholder="Book Title" ngModel #booktitle="ngModel">
             <span class="text-danger" *ngIf="booktitle.errors?.required && booktitle.touched && booktitle.dirty">*Titleis
               required</span>
@@ -36,7 +36,7 @@
           <div class="form-group">
             <label for="bookauthor">Author</label>
             <input required pattern="^([a-zA-Z]+\s*)+$" type="text" class="form-control" id="bookauthor" name="bookauthor"
-              [(ngModel)]="book.authorName" value="book.authorName" placeholder="Book author" #bookauthor="ngModel"
+              [ngModel]="book.authorName" value="book.authorName" placeholder="Book author" #bookauthor="ngModel"
               ngModel>
             <span class="text-danger" *ngIf="bookauthor.errors?.required  && bookauthor.touched && bookauthor.dirty">*
               Book Author is
