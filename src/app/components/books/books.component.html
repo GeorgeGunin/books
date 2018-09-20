@@ -13,7 +13,7 @@
   <div class="col-sm-6">
     <div *ngFor="let book of books" class="card mt-3">
 
-      <div class="card-header">{{book.bookTitle | titlecase}}</div>
+      <div class="card-header"><b>{{book.bookTitle | titlecase}}</b></div>
       <div class="card-body">
         <p class="card-text">Author Name : <b>{{book.authorName}}</b></p>
         <p class="card-text">Published date : <b>{{book.publishedDate | date:longDate}}</b></p>
@@ -24,17 +24,5 @@
           data-whatever="book">edit</button>
       </div>
     </div>
-  </div>
-</div>
-
-<div class="row mt-5">
-  <div class="col-sm-12">
-    <p>{{message}}</p>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-sm-12">
-    <p *ngFor="let test of arrayTest">{{test}}</p>
   </div>
 </div>
